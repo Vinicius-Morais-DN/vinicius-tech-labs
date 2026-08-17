@@ -457,32 +457,6 @@ Durante a revisão, percebi que ainda preciso consolidar:
 - relação entre IPv4, MAC e NIC;
 - aplicação desses conceitos em equipamentos Cisco.
 
----
-
-## 🧪 Próximo laboratório sugerido
-
-Aplicar os conceitos estudados em um cenário prático no **Cisco Packet Tracer**:
-
-**Cenário:**
-
-```text
-PC1 ──┐
-      │
-    Switch
-      │
-PC2 ──┘
-```
-
-Configurar uma rede IPv4, identificar:
-
-- endereço de rede;
-- máscara;
-- primeiro host;
-- último host;
-- broadcast;
-- quantidade de hosts disponíveis.
-
-Depois, avançar para a divisão dessa rede em sub-redes e testar a comunicação entre os dispositivos.
 
 ---
 
