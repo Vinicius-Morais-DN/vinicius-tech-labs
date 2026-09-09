@@ -20,13 +20,23 @@ vinicius-tech-labs/
 ├── linux/
 │   ├── studies/
 │   └── labs/
-└── networking/
-    └── cisco/
-        ├── studies/
-        └── labs/
+├── networking/
+│   └── cisco/
+│       ├── studies/
+│       └── labs/
+├── cybersecurity/
+│   ├── studies/
+│   └── labs/
+├── python/
+│   ├── studies/
+│   └── labs/
+├── databases/
+│   ├── studies/
+│   └── labs/
+└── projects/
 ```
 
-As áreas de Cybersecurity, Python, Databases e a pasta `projects/` serão criadas somente quando houver conteúdo real para documentar.
+As áreas de Cybersecurity, Python e Databases já têm seu espaço reservado, mas só receberão conteúdo quando houver estudos ou laboratórios reais. A pasta `projects/` será usada quando surgir o primeiro projeto.
 
 ## Princípios
 
