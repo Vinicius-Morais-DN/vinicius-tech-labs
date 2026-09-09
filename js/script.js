@@ -33,3 +33,14 @@ window.addEventListener('scroll', () => {
   else header.classList.remove('scrolled');
   lastScroll = currentScroll;
 }, { passive: true });
+
+const themeToggle = document.querySelector('.theme-toggle');
+const savedTheme = localStorage.getItem('vinicius-theme');
+if (savedTheme === 'light') document.body.classList.add('light-mode');
+
+themeToggle?.addEventListener('click', () => {
+  document.body.classList.toggle('light-mode');
+  const mode = document.body.classList.contains('light-mode') ? 'light' : 'dark';
+  localStorage.setItem('vinicius-theme', mode);
+  themeToggle.setAttribute('aria-label', mode === 'light' ? 'Ativar modo escuro' : 'Ativar modo claro');
+});
