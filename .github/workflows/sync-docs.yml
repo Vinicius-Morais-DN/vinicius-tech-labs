@@ -1,0 +1,23 @@
+name: Sync GitHub Docs to Portfolio
+
+on:
+  push:
+    branches: [ main ]
+    paths:
+      - '**.md'
+      - '**/labs/**'
+  workflow_dispatch:  # Permite execução manual
+
+jobs:
+  sync-docs:
+    runs-on: ubuntu-latest
+    
+    steps:
+      - name: Sync docs to portfolio
+        run: |
+          # Chama o endpoint de sincronização do backend
+          # Substitua pela URL do seu backend quando em produção
+          curl -X POST \
+            -H "Authorization: Bearer ${{ secrets.PORTFOLIO_API_TOKEN }}" \
+            -H "Content-Type: application/json" \
+            ${{ secrets.PORTFOLIO_BACKEND_URL }}/api/admin/sync-github-docs
