@@ -1,6 +1,6 @@
 # Vinicius Tech Labs
 
-Portfólio técnico estático para registrar estudos, laboratórios e evolução em tecnologia. A interface foi construída em HTML, CSS e JavaScript puros, com layout responsivo e publicação preparada para GitHub Pages.
+Portfólio técnico estático para registrar estudos, laboratórios e evolução em tecnologia.
 
 ## Rodar localmente
 
