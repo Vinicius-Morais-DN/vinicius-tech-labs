@@ -381,6 +381,35 @@ dir backend\saves\
 
 ---
 
+## 🚀 Deploy em Produção
+
+Para colocar o portfólio online, consulte o guia completo de deploy:
+
+**[DEPLOY.md](DEPLOY.md)** — Instruções detalhadas para:
+- GitHub Pages (frontend apenas - gratuito)
+- Vercel (frontend - gratuito)
+- Render (frontend + backend - gratuito) ✅ **Recomendado**
+- Railway (frontend + backend - gratuito)
+- Self-hosted (VPS/DigitalOcean/AWS)
+
+### Resumo Rápido (Render - gratuito)
+
+1. **MongoDB Atlas:** Crie cluster gratuito em https://www.mongodb.com/cloud/atlas
+2. **Backend no Render:**
+   - New → Web Service
+   - Root Directory: `backend`
+   - Build Command: `pip install -r requirements.txt`
+   - Start Command: `uvicorn server:app --host 0.0.0.0 --port $PORT`
+   - Environment Variables: `MONGODB_URI`, `JWT_SECRET`
+3. **Frontend no Render:**
+   - New → Static Site
+   - Root Directory: `frontend`
+   - Build Command: `npm run build`
+   - Publish Directory: `build`
+   - Environment Variables: `REACT_APP_BACKEND_URL` (URL do backend)
+
+---
+
 ## Licença
 
 MIT — use, modifique e publique seu próprio portfólio.
