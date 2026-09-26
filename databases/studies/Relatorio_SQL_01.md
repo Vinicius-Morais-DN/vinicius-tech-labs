@@ -41,6 +41,6 @@ Entre os sistemas e fabricantes apresentados no conteúdo estão **Oracle, IBM, 
 
 ## 6. O que compreendi
 
-O que mais compreendi com o vídeo foi que um banco de dados não é apenas um local onde informações ficam armazenadas. Existe toda uma estrutura responsável por organizar, controlar e permitir o acesso aos dados.
+O que eu mais foi que um banco de dados não é apenas um local onde informações ficam armazenadas. Existe toda uma estrutura responsável por organizar, controlar e permitir o acesso aos dados.
 
 Também compreendi que existem diferentes modelos de organização dos bancos de dados e que o modelo relacional utiliza tabelas que podem possuir relações entre si. Esse conceito é importante para entender o funcionamento do MySQL e posteriormente aprender a utilizar SQL para consultar e modificar os dados.
