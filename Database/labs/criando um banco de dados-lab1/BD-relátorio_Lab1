@@ -1,0 +1,441 @@
+# Relatório — Lab 1: Banco de Dados e SQL
+
+## 1. Objetivo
+
+Nesta prática foi criada e manipulada uma base de dados utilizando MySQL, aprendendo os comandos básicos para:
+
+- Criar um banco de dados
+- Criar uma tabela
+- Definir campos e tipos de dados
+- Inserir registros
+- Consultar informações
+- Excluir registros
+
+A prática também serviu para entender a diferença entre banco de dados, tabela, campos e registros.
+
+---
+
+## 2. Criando o Banco de Dados
+
+### CREATE DATABASE
+
+```sql
+CREATE DATABASE SRTbd;
+```
+
+**Explicação:** Cria um novo banco de dados chamado `SRTbd`.
+
+O banco de dados funciona como um **container** que pode armazenar tabelas e seus dados.
+
+### SHOW DATABASES
+
+```sql
+SHOW DATABASES;
+```
+
+**Explicação:** Mostra os bancos de dados disponíveis no servidor MySQL.
+
+### USE
+
+```sql
+USE SRTbd;
+```
+
+**Explicação:** Seleciona o banco de dados que será utilizado.
+
+Depois desse comando, os comandos referentes às tabelas serão executados dentro do banco `SRTbd`.
+
+### Resumo das Diferenças
+
+| Comando | Função |
+|---------|--------|
+| `CREATE DATABASE` | Cria o banco |
+| `SHOW DATABASES` | Mostra os bancos existentes |
+| `USE` | Seleciona o banco que será utilizado |
+
+---
+
+## 3. Criando a Tabela
+
+Foi criada a tabela `pessoas`:
+
+```sql
+CREATE TABLE Pessoas (
+    id INT NOT NULL AUTO_INCREMENT PRIMARY KEY,
+    nome VARCHAR(30) NOT NULL,
+    nascimento DATE,
+    sexo ENUM('M', 'F'),
+    peso DECIMAL(5,2),
+    altura DECIMAL(3,2),
+    nacionalidade VARCHAR(20) DEFAULT 'Brasil'
+);
+```
+
+**O que é uma tabela?**
+
+A tabela é onde os **registros serão armazenados**. Cada campo possui um tipo e algumas regras.
+
+---
+
+## 4. Análise dos Campos da Tabela
+
+### Campo `id`
+
+```sql
+id INT NOT NULL AUTO_INCREMENT PRIMARY KEY
+```
+
+| Atributo | Explicação |
+|----------|-----------|
+| `INT` | Armazena números inteiros |
+| `NOT NULL` | O campo não pode ficar vazio |
+| `AUTO_INCREMENT` | MySQL gera automaticamente o próximo número (1, 2, 3, ...) |
+| `PRIMARY KEY` | Define como chave primária - identifica cada pessoa de forma única |
+
+### Campo `nome`
+
+```sql
+nome VARCHAR(30) NOT NULL
+```
+
+- `VARCHAR(30)` permite armazenar texto com até 30 caracteres
+- `NOT NULL` indica que o nome é obrigatório
+
+### Campo `nascimento`
+
+```sql
+nascimento DATE
+```
+
+- `DATE` armazena datas no formato `AAAA-MM-DD`
+- Exemplo: `1992-08-15`
+
+### Campo `sexo`
+
+```sql
+sexo ENUM('M', 'F')
+```
+
+- `ENUM` define opções específicas:
+  - M: Masculino
+  - F: Feminino
+
+### Campo `peso`
+
+```sql
+peso DECIMAL(5,2)
+```
+
+- `DECIMAL(5,2)` permite até 5 dígitos no total, sendo 2 após a vírgula
+- Exemplos: `82.40`, `61.50`, `91.30`
+
+### Campo `altura`
+
+```sql
+altura DECIMAL(3,2)
+```
+
+- `DECIMAL(3,2)` permite até 3 dígitos, com 2 casas decimais
+- Exemplos: `1.78`, `1.65`, `1.84`
+
+### Campo `nacionalidade`
+
+```sql
+nacionalidade VARCHAR(20) DEFAULT 'Brasil'
+```
+
+- `VARCHAR(20)` armazena texto com até 20 caracteres
+- `DEFAULT 'Brasil'` define o valor padrão automático
+
+Se um cadastro não informar a nacionalidade:
+```sql
+INSERT INTO pessoas (nome, sexo)
+VALUES ('Marcos', 'M');
+```
+
+Ele receberá `Brasil` automaticamente.
+
+---
+
+## 5. Consultando a Estrutura da Tabela
+
+### DESCRIBE
+
+```sql
+DESCRIBE pessoas;
+```
+
+**O que mostra:**
+- Nome dos campos
+- Tipos de dados
+- Se aceitam NULL
+- Chave primária
+- Valor padrão
+- AUTO_INCREMENT
+
+### SELECT *
+
+```sql
+SELECT * FROM pessoas;
+```
+
+**O que mostra:** Os registros existentes na tabela (todos as colunas).
+
+### Diferença Importante
+
+| Comando | O que mostra |
+|---------|------------|
+| `DESCRIBE` | Estrutura da tabela (como é construída) |
+| `SELECT *` | Dados armazenados na tabela |
+
+---
+
+## 6. Inserindo Registros
+
+### INSERT INTO - Vários Registros
+
+```sql
+INSERT INTO pessoas
+    (nome, nascimento, sexo, peso, altura)
+VALUES
+    ('Joaquim', '1992-08-15', 'M', 82.4, 1.78),
+    ('Mariana', '2001-03-22', 'F', 61.5, 1.65),
+    ('Rafael', '1978-11-09', 'M', 91.3, 1.84),
+    ('Camila', '1996-06-17', 'F', 68.2, 1.70);
+```
+
+Explicação:
+- A primeira parte informa os campos: `(nome, nascimento, sexo, peso, altura)`
+- O `VALUES` informa os valores correspondentes
+- É possível inserir vários registros em um único `INSERT`
+
+### INSERT INTO - Alguns Campos
+
+```sql
+INSERT INTO pessoas
+    (nome, sexo)
+VALUES
+    ('Marcos', 'M');
+```
+
+O que acontece:
+- Somente `nome` e `sexo` são informados
+- Os outros campos ficam com valores padrão ou `NULL`
+- A `nacionalidade` recebe `Brasil` automaticamente (por causa do `DEFAULT`)
+
+### INSERT INTO - Todos os Campos
+
+```sql
+INSERT INTO pessoas
+    (nome, nascimento, sexo, peso, altura, nacionalidade)
+VALUES
+    ('Irís', '2026-06-17', 'F', 55.0, 1.60, 'Brasil');
+```
+
+O `INSERT` pode receber alguns campos ou todos os campos da tabela, demonstrando sua flexibilidade.
+
+### INSERT INTO - Diferentes Nacionalidades
+
+```sql
+INSERT INTO pessoas
+    (nome, sexo, nacionalidade)
+VALUES
+    ('Lucas', 'M', 'Portugal'),
+    ('Sofia', 'F', 'Argentina'),
+    ('Daniel', 'M', 'EUA'),
+    ('Yuki', 'F', 'Japão'),
+    ('Hans', 'M', 'Alemanha'),
+    ('Amelia', 'F', 'Inglaterra');
+```
+
+Demonstrou que o valor padrão `Brasil` pode ser substituído quando outro valor é informado.
+
+---
+
+## 7. Excluindo Registros
+
+### DELETE FROM
+
+```sql
+DELETE FROM pessoas
+WHERE id IN (19);
+```
+
+Explicação:
+- `DELETE FROM` remove registros de uma tabela
+- `WHERE` define uma condição para determinar quais registros serão afetados
+- `WHERE id IN (19)` seleciona o registro cujo `id` seja `19`
+
+### Importância do WHERE
+
+```sql
+-- PERIGOSO - Remove TODOS os registros!
+DELETE FROM pessoas;
+
+-- SEGURO - Remove apenas alguns registros
+DELETE FROM pessoas WHERE id IN (19, 20, 21);
+```
+
+O `WHERE` é muito importante em um `DELETE` para evitar deletar dados desnecessariamente.
+
+### IN - Múltiplos Valores
+
+```sql
+WHERE id IN (19, 20, 21)
+```
+
+O `IN` permite verificar se um valor está dentro de uma lista. Nesse exemplo, seleciona registros com IDs 19, 20 ou 21.
+
+---
+
+## 8. Consultando Dados Após Alteração
+
+```sql
+SELECT * FROM pessoas;
+```
+
+Depois da exclusão, foi utilizado `SELECT` para verificar os dados existentes na tabela após a alteração.
+
+Isso demonstra a importância de usar `SELECT` para **validar o resultado** das operações realizadas.
+
+---
+
+## 9. Resumo dos Comandos Aprendidos
+
+| Comando | Função |
+|---------|--------|
+| `CREATE DATABASE` | Cria um banco de dados |
+| `SHOW DATABASES` | Lista os bancos disponíveis |
+| `USE` | Seleciona um banco |
+| `CREATE TABLE` | Cria uma tabela |
+| `DESCRIBE` | Mostra a estrutura da tabela |
+| `SELECT` | Consulta dados |
+| `INSERT INTO` | Insere registros |
+| `VALUES` | Define os valores inseridos |
+| `DELETE FROM` | Exclui registros |
+| `WHERE` | Define uma condição |
+| `IN` | Verifica valores dentro de uma lista |
+
+---
+
+## 10. Conceitos Aprendidos
+
+### Banco de Dados
+
+É utilizado para organizar e armazenar informações de forma estruturada.
+
+### Tabela
+
+É onde os dados são organizados em campos (colunas) e registros (linhas).
+
+### Campo
+
+É uma coluna da tabela que representa determinado tipo de informação.
+
+Exemplos: `nome`, `nascimento`, `sexo`, `peso`, `altura`
+
+### Registro
+
+É uma linha contendo os dados de uma pessoa.
+
+Exemplo:
+```
+Joaquim | 1992-08-15 | M | 82.4 | 1.78
+```
+
+### Chave Primária (PRIMARY KEY)
+
+Identifica os registros de forma única. No caso, o campo `id` foi definido como chave primária.
+
+### Valor Padrão (DEFAULT)
+
+Define um valor que será usado automaticamente se nenhum valor for informado.
+
+Exemplo: `DEFAULT 'Brasil'` para nacionalidade.
+
+### Restrição
+
+Regras que determinam como os dados devem ser armazenados.
+
+Exemplos:
+- `NOT NULL`: Campo obrigatório
+- `PRIMARY KEY`: Identifica registros únicos
+- `AUTO_INCREMENT`: Incrementa automaticamente
+- `UNIQUE`: Não permite valores duplicados
+
+---
+
+## 11. O Que Eu Aprendi
+
+Durante esta prática, aprendi:
+
+- Criar banco de dados utilizando `CREATE DATABASE` e verificar com `SHOW DATABASES`
+- Selecionar banco utilizando `USE`
+- Criar tabelas utilizando `CREATE TABLE` com diferentes tipos de dados:
+  - `INT`: Números inteiros
+  - `VARCHAR`: Texto
+  - `DATE`: Datas
+  - `ENUM`: Opções pré-definidas
+  - `DECIMAL`: Números com casas decimais
+- Utilizar restrições como:
+  - `NOT NULL`: Campo obrigatório
+  - `PRIMARY KEY`: Identificador único
+  - `AUTO_INCREMENT`: Numeração automática
+  - `DEFAULT`: Valor padrão
+- Consultar estrutura de tabelas com `DESCRIBE`
+- Consultar dados com `SELECT`
+- Inserir registros com `INSERT INTO`, inclusive:
+  - Inserindo vários registros de uma vez
+  - Inserindo apenas alguns campos
+  - Utilizando valores padrão
+- Deletar registros com `DELETE FROM`, `WHERE` e `IN`
+- Diferenciar entre:
+  - `DESCRIBE` (estrutura) vs `SELECT` (dados)
+  - `CREATE DATABASE` vs `USE` vs `SHOW DATABASES`
+
+---
+
+## 12. Resultado da Prática
+
+Ao final da prática, foi criada a seguinte estrutura:
+
+```
+SRTbd (banco de dados)
+└── pessoas (tabela)
+    ├── id (INT, PRIMARY KEY, AUTO_INCREMENT)
+    ├── nome (VARCHAR(30), NOT NULL)
+    ├── nascimento (DATE)
+    ├── sexo (ENUM('M', 'F'))
+    ├── peso (DECIMAL(5,2))
+    ├── altura (DECIMAL(3,2))
+    └── nacionalidade (VARCHAR(20), DEFAULT 'Brasil')
+```
+
+Operações realizadas:
+- Criação do banco e tabela
+- Inserção de múltiplos registros
+- Consulta de estrutura e dados
+- Exclusão de registros com condições
+- Validação dos resultados
+
+---
+
+## 13. Conclusão
+
+Esta prática serviu como base fundamental para entender o funcionamento de um banco de dados relacional e os principais comandos SQL utilizados para manipular seus dados.
+
+Os conhecimentos adquiridos são essenciais para qualquer trabalho com banco de dados:
+
+- Organizar dados de forma estruturada
+- Recuperar informações quando necessário
+- Modificar dados quando houver mudanças
+- Remover informações obsoletas
+
+Esta é a base para práticas mais avançadas com JOINs, subconsultas, índices e otimizações de desempenho.
+
+---
+
+**Disciplina:** SQL e Banco de Dados  
+**Turma:** 2SRT - CEAP  
+**Aluno:** Vinicius de Morais  
+**Data:** Setembro de 2026
