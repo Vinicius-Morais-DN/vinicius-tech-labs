@@ -108,6 +108,8 @@ Este repositório está em desenvolvimento contínuo.
 
 Novos laboratórios, estudos e relatórios serão adicionados conforme o aprendizado avançar, mantendo o histórico da evolução técnica ao longo do tempo.
 
+> **Nota:** a data de publicação ou atualização de um arquivo no GitHub não representa necessariamente a data em que o conteúdo foi estudado. O repositório é atualizado conforme os estudos, práticas e documentações são organizados.
+
 ## Licença
 
 Este repositório está disponível sob a licença definida no arquivo [LICENSE](LICENSE).
