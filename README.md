@@ -34,13 +34,13 @@ Estudos e práticas relacionados à administração e utilização de sistemas L
 
 Estudos e exercícios de banco de dados, principalmente SQL e MySQL.
 
-- [Database — Labs](databases/labs/)
-- [Database — Studies](databases/studies/)
+- [Database — Labs](Database/labs/)
+- [Database — Studies](Database/studies/)
 
 Alguns relatórios já documentados:
 
-- [Relatório SQL 01](databases/studies/Relatorio_SQL_01.md)
-- [Relatório SQL 02](databases/studies/Relatorio_SQL_02.md)
+- [Relatório SQL 01](Database/studies/Relatorio_SQL_01.md)
+- [Relatório SQL 02](Database/studies/Relatorio_SQL_02.md)
 
 ### Cibersegurança
 
@@ -64,7 +64,7 @@ vinicius-tech-labs/
 │   ├── labs/
 │   └── studies/
 │
-├── databases/
+├── Database/
 │   ├── labs/
 │   └── studies/
 │
@@ -73,6 +73,9 @@ vinicius-tech-labs/
 │   └── studies/
 │
 ├── projects/
+│
+├── .devcontainer/
+│   └── devcontainer.json
 │
 ├── .github/
 ├── LICENSE
