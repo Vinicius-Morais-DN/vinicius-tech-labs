@@ -337,18 +337,3 @@ Neste laboratório foi realizada a configuração básica do `SW-B01`, incluindo
 A configuração resultou em um switch funcional para o ambiente de laboratório.
 
 ---
-
-## Arquivo do Packet Tracer
-
-O arquivo `.pkt` do laboratório **será adicionado posteriormente** a esta pasta:
-
-`config-basic-switch/`
-
-A estrutura ficará:
-
-```text
-config-basic-switch/
-├── README.md
-└── config-basic-switch.pkt
-```
-
