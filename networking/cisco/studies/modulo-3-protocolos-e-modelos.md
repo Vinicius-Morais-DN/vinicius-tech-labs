@@ -1,4 +1,4 @@
-# Resumo do Módulo 3 — **Protocolos e modelos**
+# Módulo 3 — **Protocolos e modelos**
 
 **Curso:** CCNA — Introdução às Redes  
 **Referência:** Cisco Networking Academy  
