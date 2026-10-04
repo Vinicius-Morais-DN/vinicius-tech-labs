@@ -2,6 +2,7 @@
 
 **Curso:** CCNA — Introdução às Redes  
 **Referência:** Cisco Networking Academy
+**Data-Modúlo-2:** 16/02/2026
 
 ## 1. Introdução
 
