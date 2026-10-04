@@ -1,4 +1,4 @@
-# Resumo do Módulo 7 — **Switching Ethernet**
+# Módulo 7 — **Switching Ethernet**
 
 **Curso:** CCNA — Introdução às Redes  
 **Referência:** Cisco Networking Academy  
