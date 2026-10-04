@@ -265,13 +265,52 @@ A **fibra multimodo (multimode)** possui um núcleo maior e permite vários modo
 
 Entre os conectores encontrados em redes estão:
 
-- LC;
-- SC;
-- ST.
+- **LC (Lucent Connector):** pequeno e bastante utilizado em instalações de alta densidade;
+- **SC (Subscriber Connector):** possui mecanismo de encaixe do tipo push-pull;
+- **ST (Straight Tip):** utiliza encaixe do tipo baioneta e é encontrado principalmente em instalações mais antigas.
 
-Os **transceptores (transceivers)** realizam a conversão entre sinais elétricos e ópticos. A compatibilidade deve considerar fatores como tipo de fibra, velocidade, distância e equipamento.
+Os **transceptores (transceivers)** são componentes que fazem a conversão entre sinais elétricos e ópticos, permitindo que equipamentos de rede utilizem interfaces de fibra. A compatibilidade deve considerar fatores como:
 
-A fibra também pode sofrer atenuação, dispersão, sujeira nos conectores, curvaturas excessivas e problemas de instalação.
+- Tipo de fibra, monomodo ou multimodo;
+- Velocidade suportada;
+- Distância do enlace;
+- Comprimento de onda;
+- Tipo de conector;
+- Compatibilidade com o equipamento.
+
+Entre os módulos ópticos comuns estão **SFP** e **SFP+**, usados em equipamentos de rede para fornecer interfaces de diferentes velocidades e meios físicos.
+
+A fibra também pode sofrer problemas como:
+
+- Atenuação;
+- Dispersão;
+- Conectores sujos;
+- Curvaturas excessivas;
+- Emendas ou terminações inadequadas;
+- Incompatibilidade entre transceptores.
+
+Por isso, a limpeza dos conectores, o respeito ao raio mínimo de curvatura e a utilização do transceptor compatível são importantes para manter a qualidade do enlace.
+
+### Ordem das cores no cabo UTP
+
+Na montagem de cabos UTP, a ordem dos condutores no conector RJ-45 deve seguir um padrão de pinagem. Os dois padrões mais comuns são **T568A** e **T568B**.
+
+| Pino | T568A | T568B |
+|---|---|---|
+| 1 | Branco/Verde | Branco/Laranja |
+| 2 | Verde | Laranja |
+| 3 | Branco/Laranja | Branco/Verde |
+| 4 | Azul | Azul |
+| 5 | Branco/Azul | Branco/Azul |
+| 6 | Laranja | Verde |
+| 7 | Branco/Marrom | Branco/Marrom |
+| 8 | Marrom | Marrom |
+
+No **cabo direto (straight-through)**, o mesmo padrão é usado nas duas extremidades, como T568B–T568B.
+
+No **cabo cruzado (crossover)**, um padrão é usado em cada extremidade, normalmente T568A–T568B.
+
+> **Importante:** a sequência dos pares deve ser mantida corretamente na montagem. Não basta que exista continuidade elétrica; uma terminação incorreta pode causar problemas de desempenho, como diafonia e falhas de transmissão.
 
 ## 7. Meios sem fio
 
