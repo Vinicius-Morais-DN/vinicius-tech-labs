@@ -1,8 +1,8 @@
 # Resumo do Módulo 2 — **Switch básico e configuração de dispositivo final**
 
 **Curso:** CCNA — Introdução às Redes  
-**Referência:** Cisco Networking Academy
-**Data-Modúlo-2:** 16/02/2026
+**Referência:** Cisco Networking Academy  
+**Data-Modúlo-2** 16/02/2026
 
 ## 1. Introdução
 
