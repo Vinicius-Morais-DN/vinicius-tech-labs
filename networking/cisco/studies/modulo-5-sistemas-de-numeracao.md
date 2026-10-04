@@ -1,4 +1,4 @@
-# Resumo do Módulo 5 — **Sistemas de numeração**
+# Módulo 5 — **Sistemas de numeração**
 
 **Curso:** CCNA — Introdução às Redes  
 **Referência:** Cisco Networking Academy  
