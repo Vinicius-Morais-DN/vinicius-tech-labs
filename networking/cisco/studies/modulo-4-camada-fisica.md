@@ -1,4 +1,4 @@
-# Resumo do Módulo 4 — **Camada física**
+# Módulo 4 — **Camada física**
 
 **Curso:** CCNA — Introdução às Redes  
 **Referência:** Cisco Networking Academy  
