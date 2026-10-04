@@ -20,33 +20,6 @@ O módulo aborda:
 
 A ideia central é que a comunicação em rede não acontece de forma aleatória. Os dispositivos precisam seguir regras comuns para que equipamentos e tecnologias diferentes possam trabalhar juntos.
 
-## 3.0. Introdução
-
-### Por que estudar este módulo?
-
-Quando dois dispositivos se comunicam, eles precisam concordar sobre vários aspectos, como:
-
-- Como iniciar e encerrar a comunicação;
-- Qual será o formato da mensagem;
-- Como identificar origem e destino;
-- Qual será o tamanho das mensagens ou de suas partes;
-- Como controlar o tempo da comunicação;
-- Como lidar com problemas durante a transmissão.
-
-Sem regras comuns, dispositivos e fabricantes poderiam utilizar formas incompatíveis de comunicação.
-
-### Atividade: projetar um sistema de comunicação
-
-A atividade introdutória mostra que até uma comunicação simples precisa de regras. É necessário definir, por exemplo:
-
-- Quem inicia a comunicação;
-- Como o destinatário será identificado;
-- Qual formato será utilizado;
-- Como indicar o fim da mensagem;
-- Como confirmar ou tratar o recebimento;
-- O que fazer quando uma parte da comunicação apresenta problema.
-
-Nas redes, os protocolos cumprem esse papel: tornam a comunicação previsível e permitem que diferentes dispositivos se entendam.
 
 ## 2. Regras de comunicação
 
@@ -442,81 +415,8 @@ A diferença principal pode ser resumida assim:
 
 O detalhamento de mecanismos específicos de resolução de endereços e das tabelas de dispositivos é aprofundado em módulos posteriores do curso.
 
-## 9. Prática e quiz do módulo
 
-A etapa de prática revisa os conceitos estudados e pode utilizar o Packet Tracer e atividades interativas.
-
-### O que praticar
-
-- Identificar as camadas do modelo OSI;
-- Relacionar funções às camadas;
-- Associar protocolos às suas funções;
-- Ordenar as etapas do encapsulamento;
-- Identificar dados, segmentos, pacotes, quadros e bits;
-- Diferenciar endereços IP e MAC;
-- Determinar quando um host utiliza o destino local ou o gateway padrão;
-- Observar a comunicação entre dispositivos locais e remotos.
-
-### Perguntas de revisão
-
-1. Por que os protocolos são necessários?
-2. Qual é a diferença entre um protocolo e uma suíte de protocolos?
-3. Quais são as sete camadas do modelo OSI?
-4. Qual é a função principal da camada de transporte?
-5. Qual é a diferença entre pacote e quadro?
-6. Em qual camada o endereço IP é utilizado?
-7. Em qual camada o endereço MAC é utilizado?
-8. Quando um host utiliza o gateway padrão?
-9. O que acontece durante o encapsulamento?
-10. Qual é a sequência das unidades de dados (PDUs)?
-
-# Pontos essenciais para memorizar
-
-## Sequência das PDUs
-
-**Dados → Segmento/Datagrama → Pacote → Quadro → Bits**
-
-## Modelo OSI
-
-1. Física
-2. Enlace de dados
-3. Rede
-4. Transporte
-5. Sessão
-6. Apresentação
-7. Aplicação
-
-**Da camada 7 para a 1:** Aplicação, Apresentação, Sessão, Transporte, Rede, Enlace de dados e Física.
-
-Uma forma de memorizar em português é:
-
-**A Pessoa Só Tem Redes Em Fios**
-
-Aplicação, Apresentação, Sessão, Transporte, Rede, Enlace e Física.
-
-## Modelo TCP/IP
-
-**Aplicação → Transporte → Internet → Acesso à rede**
-
-## Diferença entre IP e MAC
-
-| Característica | Endereço IP | Endereço MAC |
-|---|---|---|
-| Tipo | Lógico | Endereço de enlace |
-| Principal função | Identificar e encaminhar na camada de rede | Identificar a comunicação no enlace local |
-| Uso | Comunicação entre redes | Entrega no enlace local |
-| Camada | Rede | Enlace de dados |
-
-## Diferença entre switch e roteador
-
-- **Switch:** trabalha principalmente na camada de enlace e encaminha quadros com base em endereços MAC.
-- **Roteador:** trabalha na camada de rede e encaminha pacotes entre redes com base em endereços IP e informações de roteamento.
-
-## Encapsulamento
-
-O encapsulamento adiciona informações conforme os dados descem pelas camadas. O desencapsulamento processa essas informações no destino conforme os dados sobem pelas camadas.
-
-## Resumo final
+## Conclusão
 
 O Módulo 3 mostra que a comunicação em rede depende de regras e padrões organizados. Protocolos definem como os dispositivos se comunicam; suítes de protocolos reúnem funções diferentes; organizações de padronização promovem interoperabilidade; os modelos OSI e TCP/IP ajudam a dividir as responsabilidades; e o encapsulamento permite que cada camada acrescente as informações necessárias.
 
