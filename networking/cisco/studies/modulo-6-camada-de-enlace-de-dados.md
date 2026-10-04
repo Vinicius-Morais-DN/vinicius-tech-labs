@@ -1,4 +1,4 @@
-# Resumo do Módulo 6 — **Camada de enlace de dados**
+# Módulo 6 — **Camada de enlace de dados**
 
 **Curso:** CCNA — Introdução às Redes  
 **Referência:** Cisco Networking Academy  
