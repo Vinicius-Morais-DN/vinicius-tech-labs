@@ -22,7 +22,35 @@ O **Cisco IOS** é o sistema operacional utilizado em roteadores e switches Cisc
 
 ---
 
-## 2. Acesso ao Cisco IOS
+## 2. GUI e CLI
+
+A interação com sistemas e dispositivos pode ser feita por diferentes tipos de interface.
+
+### GUI — Graphical User Interface
+
+A **GUI (Graphical User Interface — Interface Gráfica do Usuário)** utiliza elementos visuais para permitir a interação com o sistema, como janelas, menus, ícones e botões.
+
+### CLI — Command Line Interface
+
+A **CLI (Command Line Interface — Interface de Linha de Comando)** permite interagir com o sistema por meio de comandos digitados diretamente no terminal.
+
+No Cisco IOS, a CLI é o principal meio utilizado para realizar configurações e verificar o funcionamento dos dispositivos de rede.
+
+### Objetivo do sistema operacional
+
+O **sistema operacional (SO)** tem como objetivo fornecer uma interface de interação com o equipamento e administrar os recursos do sistema.
+
+Em dispositivos Cisco, o **Cisco IOS** fornece essa interface e permite realizar tarefas como:
+
+- Configurar o dispositivo;
+- Administrar interfaces;
+- Controlar recursos de rede;
+- Verificar o estado do equipamento;
+- Aplicar configurações de segurança.
+
+---
+
+## 3. Acesso ao Cisco IOS
 
 O acesso ao IOS pode ser feito de diferentes maneiras.
 
@@ -45,7 +73,7 @@ O Packet Tracer permite simular o acesso ao console e praticar comandos sem util
 
 ---
 
-## 3. Modos do Cisco IOS
+## 4. Modos do Cisco IOS
 
 O IOS possui diferentes modos de operação. Cada modo permite executar determinados comandos.
 
@@ -134,7 +162,7 @@ Switch(config-line)#
 
 ---
 
-## 4. Navegação no IOS
+## 5. Navegação no IOS
 
 Alguns comandos importantes para navegar no IOS são:
 
@@ -174,7 +202,7 @@ configure terminal
 
 ---
 
-## 5. Estrutura dos comandos
+## 6. Estrutura dos comandos
 
 Os comandos do IOS normalmente seguem uma estrutura formada por:
 
@@ -238,7 +266,7 @@ desabilita a interface.
 
 ---
 
-## 6. Configuração básica dos dispositivos
+## 7. Configuração básica dos dispositivos
 
 A configuração inicial recomendada inclui a identificação do dispositivo, senhas e mensagens de segurança.
 
@@ -304,7 +332,7 @@ no ip domain-lookup
 
 ---
 
-## 7. Salvamento das configurações
+## 8. Salvamento das configurações
 
 O IOS trabalha principalmente com dois tipos de configuração.
 
@@ -350,7 +378,7 @@ copy run start
 
 ---
 
-## 8. Portas e endereços
+## 9. Portas e endereços
 
 Os dispositivos de rede usam diferentes tipos de identificação.
 
@@ -405,7 +433,7 @@ Por padrão, algumas interfaces de roteadores podem começar desativadas. O coma
 
 ---
 
-## 9. Configuração de endereços IP
+## 10. Configuração de endereços IP
 
 ### Endereço IP em um dispositivo final
 
@@ -452,7 +480,7 @@ Ele não é usado pelo switch para encaminhar quadros Ethernet como ocorre com u
 
 ---
 
-## 10. Verificação da conectividade
+## 11. Verificação da conectividade
 
 Depois de configurar os dispositivos, é necessário testar se eles conseguem se comunicar.
 
@@ -513,7 +541,7 @@ Esses comandos são importantes para diagnosticar erros de configuração e prob
 
 ---
 
-## 11. Procedimento básico completo
+## 12. Procedimento básico completo
 
 Um exemplo de configuração inicial de um switch seria:
 
@@ -556,21 +584,5 @@ ping 192.168.1.10
 ## Resumo final
 
 O Módulo 2 ensina os fundamentos da configuração de switches Cisco e dispositivos finais.
-
-Os conceitos trabalhados incluem:
-
-- **Cisco IOS** e seus modos de comando;
-- Acesso por console e acesso remoto;
-- Navegação no IOS;
-- Estrutura e abreviação de comandos;
-- Configuração de hostname, senhas e banner;
-- Configuração e gerenciamento de interfaces;
-- Endereços MAC e IP;
-- Configuração de IP em dispositivos finais;
-- SVI e IP de gerenciamento no switch;
-- `running-config` e `startup-config`;
-- Salvamento das configurações;
-- Verificação das interfaces e da conectividade;
-- Uso do `ping` e dos comandos `show`.
 
 O módulo também reforça a importância de configurar, salvar e verificar corretamente um dispositivo de rede antes de utilizá-lo em um ambiente real.
