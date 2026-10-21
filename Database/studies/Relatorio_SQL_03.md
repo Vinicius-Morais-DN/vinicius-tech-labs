@@ -160,7 +160,7 @@ O `DROP DATABASE` exige ainda mais cuidado, pois remove um banco de dados inteir
 
 Os scripts SQL estão separados por aula na pasta `Database/labs`:
 
-- [`alteracao-estrutura-tabelas.sql`](../labs/aula-03-alteracao-estrutura.sql) — criação do banco de aula e exercícios com `ALTER TABLE`.
-- [`cadastro-atualizacao-alunos.sql`](../labs/aula-04-manipulacao-alunos.sql) — criação da tabela `alunos`, inserção de registros e exercícios com `UPDATE`.
+- [Laboratório 02 — script SQL](../labs/lab-02/lab-02.sql) e [relatório](../labs/lab-02/relatorio-lab-02.md) — criação do banco e exercícios com `ALTER TABLE`.
+- [Laboratório 03 — script SQL](../labs/lab-03/lab-03.sql) e [relatório](../labs/lab-03/relatorio-lab-03.md) — cadastro e atualização de alunos.
 
 O comando `DROP DATABASE` ficou comentado no script de alteração de estrutura para evitar apagar o banco acidentalmente. Ele pode ser descomentado somente em um banco descartável de estudo.
