@@ -8,7 +8,7 @@ Praticar a criação de um banco de dados e de uma tabela, além de modificar a 
 
 - `CREATE DATABASE`: cria o banco de dados `AULAbd`.
 - `USE`: seleciona o banco que será utilizado.
-- `CREATE TABLE`: cria a tabela `alunos) com diferentes tipos de dados.
+- `CREATE TABLE`: cria a tabela `alunos` com diferentes tipos de dados.
 - `ALTER TABLE ... ADD`: adiciona novas colunas.
 - `MODIFY COLUMN`: modifica a definição de uma coluna.
 - `ALTER COLUMN ... SET DEFAULT`: altera o valor padrão de uma coluna.
@@ -20,7 +20,7 @@ Praticar a criação de um banco de dados e de uma tabela, além de modificar a 
 
 A estrutura de uma tabela pode ser ajustada depois da criação. É possível adicionar colunas, aumentar o tamanho permitido para um campo, definir valores padrão, renomear uma coluna e remover campos que não serão mais utilizados.
 
-Também é importante prestar atenção às restrições, como `NOT NULL), e conferir a estrutura com `DESCRIBE` depois das alterações.
+Também é importante prestar atenção às restrições, como `NOT NULL`, e conferir a estrutura com `DESCRIBE` depois das alterações.
 
 ## Cuidados
 
